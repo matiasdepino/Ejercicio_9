@@ -12,7 +12,7 @@ class car:
         self.pos_x = x
         self.pos_y = y
 
-    def move_inc(self, x, y):
+    def move_inc(self, x,  y):
         self.pos_x += x
         self.pos_y += y
 
@@ -21,17 +21,19 @@ class car:
 
 #Ejercicio 9
 class wheel:
-    def __init__(self, ancho, rodadura, diametro):
+    def __init__(self, ancho, diametro, rodadura):
         self.ancho = ancho
-        self.rodadura = rodadura
         self.diametro = diametro
+        self.rodadura = rodadura
         self.presion = 0
 
     def set_presure(self, presion):
         self.presion = presion
 
     def print_info(self):
-        return self.ancho, self.rodadura, self.diametro, self.presion
+        print("Dimensiones de la rueda :", self.ancho, "/", self.diametro, "R", self.rodadura)
+        print("Presión deseada :", self.presion)
+
 
 
 

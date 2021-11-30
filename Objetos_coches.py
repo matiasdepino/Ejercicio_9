@@ -17,7 +17,7 @@ while True:
     rodadura = input("Rodadura :")
     diametro = input("Diametro :")
 
-    wheel = car_class.wheel (ancho, rodadura, diametro)
+    wheel = car_class.wheel(ancho, rodadura, diametro)
     coches = car_class.car(marca, modelo, combustible, cilindrada, wheel)
 
     lista_coches.append(coches)
@@ -37,9 +37,10 @@ print(lista_coches)
 
 lista_coches = pp.retrive(FILE)
 for car in lista_coches:
-    print("marca, modelo, combustible, cilindrada:",
-          car.marca, car.modelo, car.combustible, car.cilindrada)
-    print("ancho, rodadura, diametro, presion:",
-          car.wheel.print_info())
-    print("Posicion", car.get_pos(), '\n')
+    print("Marca :", car.marca)
+    print("Modelo :", car.modelo)
+    print("Tipo de combustible :", car.combustible)
+    print("Cilindrada :", car.cilindrada)
+    print(car.wheel.print_info())
+    print("Posicion :", car.get_pos())
 
